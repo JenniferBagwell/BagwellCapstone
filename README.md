@@ -23,4 +23,3 @@ More of a description to be added
 1. How to start a fundraiser
 2. How to marketing your fundraiser
 3. How to raise or collect with little effort
-4. John was here
