@@ -1,3 +1,2 @@
 export default () => `
-<section id="#jumbotron">
-<h1>Welcome to this page</h1>
+  <h2>Welcome to my site</h2>
