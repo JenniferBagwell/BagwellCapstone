@@ -7,8 +7,6 @@ import * as state from "./store";
 import { Header, Nav, Main, Footer } from "./components";
 // add menu toggle to bars icon in nav bar
 
-const router = new Navigo(window.location.origin);
-
 function render(st = state.Home) {
   document.querySelector("#root").innerHTML = `
   ${Header(st)}
