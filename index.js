@@ -1,5 +1,6 @@
 import Navigo from "navigo";
 import { capitalize } from "lodash";
+const router = new Navigo(window.location.origin);
 // importing all as a Module object
 import * as state from "./store";
 // importing all by name
