@@ -9,18 +9,6 @@ import { Header, Nav, Main, Footer } from "./components";
 // import root for blog
 import axios from "axios";
 
-// get data from an API endpoint
-axios
-  .get("https://jsonplaceholder.typicode.com/posts")
-  // handle the response from the API
-  .then(response => {
-    // for each post in the response Array,
-    response.data.forEach(post => {
-      // add it to state.Blog.posts
-      state.Blog.posts.push(post);
-    });
-  });
-
 function render(st = state.Home) {
   document.querySelector("#root").innerHTML = `
   ${Header(st)}
@@ -110,3 +98,15 @@ axios.get("https://jsonplaceholder.typicode.com/posts").then(response => {
   // this params key "page" is the same as our "variable" we specified in our router's on() method
   render(state[params.page]);
 });
+
+// get data from an API endpoint
+axios
+  .get("https://jsonplaceholder.typicode.com/posts")
+  // handle the response from the API
+  .then(response => {
+    // for each post in the response Array,
+    response.data.forEach(post => {
+      // add it to state.Blog.posts
+      state.Blog.posts.push(post);
+    });
+  });
