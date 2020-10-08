@@ -99,3 +99,14 @@ ${st.posts
   })
   .join()}
 </section>`;
+
+// blog axios code our navigo router
+axios.get("https://jsonplaceholder.typicode.com/posts").then(response => {
+  response.data.forEach(post => {
+    state.Blog.posts.push(post);
+  });
+  // use our router Object to find the "current page"/last resolved route
+  const params = router.lastRouteResolved().params;
+  // this params key "page" is the same as our "variable" we specified in our router's on() method
+  render(state[params.page]);
+});
