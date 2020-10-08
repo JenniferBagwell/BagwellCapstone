@@ -6,6 +6,20 @@ import * as state from "./store";
 // importing all by name
 import { Header, Nav, Main, Footer } from "./components";
 // add menu toggle to bars icon in nav bar
+// import root for blog
+import axios from "axios";
+
+// get data from an API endpoint
+axios
+  .get("https://jsonplaceholder.typicode.com/posts")
+  // handle the response from the API
+  .then(response => {
+    // for each post in the response Array,
+    response.data.forEach(post => {
+      // add it to state.Blog.posts
+      state.Blog.posts.push(post);
+    });
+  });
 
 function render(st = state.Home) {
   document.querySelector("#root").innerHTML = `
@@ -68,3 +82,20 @@ document.querySelector("form").addEventListener("submit", event => {
     console.log("Value: ", el.value);
   });
 });
+
+// blog html
+function formatBlogPost(post) {
+  return `
+  <div class="blog-post">
+    <h4>${post.title} by User ${post.userId}</h4>
+    <p>${post.body}</p>
+  </div>`;
+}
+export default st => `
+<section id="blog">
+${st.posts
+  .map(post => {
+    formatBlogPost(post);
+  })
+  .join()}
+</section>`;
