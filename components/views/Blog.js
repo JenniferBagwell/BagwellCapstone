@@ -1,7 +1,7 @@
 // export default st => `
-<section id="blog">
-${st.posts.map(post => {}).join()}
-</section>`;
+//<section id="blog">
+//${st.posts.map(post => {}).join()}
+//</section>`;
 
 function formatBlogPost(post) {
   return `
@@ -12,7 +12,9 @@ function formatBlogPost(post) {
 }
 export default st => `
 <section id="blog">
-${st.posts.map(post => {
-  formatBlogPost(post)
-}).join()}
-</section>`
+${st.posts
+  .map(post => {
+    formatBlogPost(post);
+  })
+  .join()}
+</section>`;
