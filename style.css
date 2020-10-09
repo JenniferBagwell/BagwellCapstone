@@ -1,4 +1,5 @@
-body	{ background:url(imgs/procodebackground.png) top right no-repeat; background-attachment:fixed; }
+body	{ background:url(imgs/procodebackground.png) top right no-repeat; background-attachment:fixed;
+  max-width: 80%; }
 
   p {
     border: 2px solid darkblue;
