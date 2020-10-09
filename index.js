@@ -1,13 +1,43 @@
 import Navigo from "navigo";
 import { capitalize } from "lodash";
-const router = new Navigo(window.location.origin);
-// importing all as a Module object
 import * as state from "./store";
-// importing all by name
 import { Header, Nav, Main, Footer } from "./components";
-// add menu toggle to bars icon in nav bar
-// import root for blog
 import axios from "axios";
+
+axios
+  .get("https://jsonplaceholder.typicode.com/posts")
+  // handle the response from the API
+  .then(response => {
+    // for each post in the response Array,
+    response.data.forEach(post => {
+      // add it to state.Blog.posts
+      state.Blog.posts.push(post);
+    });
+    const params = router.lastRouteResolved().params;
+    if (params) {
+      render(state[params.page]);
+    }
+  });
+
+axios
+  .get(
+    "https://api.openweathermap.org/data/2.5/weather?q=st%20louis&APPID=fbb30b5d6cf8e164ed522e5082b49064"
+  )
+  .then(response => {
+    state.Home.weather.city = response.name;
+    state.Home.weather.temp = response.main.temp;
+    state.Home.weather.description = response.weather.main;
+  });
+
+axios
+  .get(`https://api.github.com/users/cbrantley/repos`, {
+    headers: {
+      Authorization: `token 83a3d94c2cd572128cf2f90dc1ccd67e5b912824`
+    }
+  })
+  .then(response => console.log(response.data));
+
+const router = new Navigo(window.location.origin);
 
 function render(st = state.Home) {
   document.querySelector("#root").innerHTML = `
@@ -25,12 +55,12 @@ function render(st = state.Home) {
 render(state.Home);
 
 router
-
   .on({
     "/": () => render(state.Home),
     ":page": params => render(state[capitalize(params.page)])
   })
   .resolve();
+
 function addPicOnFormSubmit(st) {
   if (st.view === "Form") {
     document.querySelector("form").addEventListener("submit", event => {
@@ -44,7 +74,6 @@ function addPicOnFormSubmit(st) {
         pictureObject[input.name] = input.value;
         return pictureObject;
       }, {});
-
       // add new picture to state.Gallery.pictures
       state.Gallery.pictures.push(newPic);
       render(state.Gallery);
@@ -60,53 +89,3 @@ function addNavEventListeners() {
       document.querySelector("nav > ul").classList.toggle("hidden--mobile")
     );
 }
-
-// handle form submission
-document.querySelector("form").addEventListener("submit", event => {
-  event.preventDefault();
-  Array.from(event.target.elements).forEach(el => {
-    console.log("Input Type: ", el.type);
-    console.log("Name: ", el.name);
-    console.log("Value: ", el.value);
-  });
-});
-
-// blog html
-function formatBlogPost(post) {
-  return `
-  <div class="blog-post">
-    <h4>${post.title} by User ${post.userId}</h4>
-    <p>${post.body}</p>
-  </div>`;
-}
-export default st => `
-<section id="blog">
-${st.posts
-  .map(post => {
-    formatBlogPost(post);
-  })
-  .join()}
-</section>`;
-
-// blog axios code our navigo router
-axios.get("https://jsonplaceholder.typicode.com/posts").then(response => {
-  response.data.forEach(post => {
-    state.Blog.posts.push(post);
-  });
-  // use our router Object to find the "current page"/last resolved route
-  const params = router.lastRouteResolved().params;
-  // this params key "page" is the same as our "variable" we specified in our router's on() method
-  render(state[params.page]);
-});
-
-// get data from an API endpoint
-axios
-  .get("https://jsonplaceholder.typicode.com/posts")
-  // handle the response from the API
-  .then(response => {
-    // for each post in the response Array,
-    response.data.forEach(post => {
-      // add it to state.Blog.posts
-      state.Blog.posts.push(post);
-    });
-  });
