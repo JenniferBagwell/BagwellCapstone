@@ -1,5 +1,4 @@
-export default () =>
-
+export default () => `
 <section id="bio">
     <h2>My Bio</h2>
     <!DOCTYPE html>
