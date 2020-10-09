@@ -1,7 +1,12 @@
 export default () => `
-<section id="csstransfer">
-<form id="frm1" action="/action_page.php">
-  First name: <input type="text" name="fname" value="Donald"><br>
-  Last name: <input type="text" name="lname" value="Duck"><br><br>
-  <input type="submit" value="Submit">
-</form>
+<form id="register" method="POST" action="">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" placeholder="Url">
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="text" name="password" id="password">
+  </div>
+  <input type="submit" name="register" value="Click here">
+</form>`;
