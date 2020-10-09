@@ -5,7 +5,7 @@ import { Header, Nav, Main, Footer } from "./components";
 import axios from "axios";
 
 axios
-  .get("https://procode.bio/post.com")
+  .get("post")
   // handle the response from the API
   .then(response => {
     // for each post in the response Array,
@@ -19,22 +19,22 @@ axios
     }
   });
 
-axios
-  .get(
-    "https://api.openweathermap.org/data/2.5/weather?q=st%20louis&APPID=fbb30b5d6cf8e164ed522e5082b49064"
-  )
-  .then(response => {
-    state.Home.weather.city = response.name;
-    state.Home.weather.temp = response.main.temp;
-    state.Home.weather.description = response.weather.main;
-  });
+//axios
+//  .get(
+//    "https://api.openweathermap.org/data/2.5/weather?q=st%20louis&APPID=fbb30b5d6cf8e164ed522e5082b49064"
+//  )
+//  .then(response => {
+ //   state.Home.weather.city = response.name;
+//    state.Home.weather.temp = response.main.temp;
+ //   state.Home.weather.description = response.weather.main;
+ // });
 
-axios
-  .get(`https://api.github.com/users/cbrantley/repos`, {
-    headers: {
-      Authorization: `token 83a3d94c2cd572128cf2f90dc1ccd67e5b912824`
-    }
-  })
+//axios
+//  .get(`https://api.github.com/users/cbrantley/repos`, {
+//    headers: {
+ //     Authorization: `token 83a3d94c2cd572128cf2f90dc1ccd67e5b912824`
+//    }
+////  })
   .then(response => console.log(response.data));
 
 const router = new Navigo(window.location.origin);
