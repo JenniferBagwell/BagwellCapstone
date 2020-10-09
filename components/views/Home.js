@@ -1,5 +1,5 @@
 export default () => `
-<section id="jumbotron">
-  <h2>Bagwell Capstone text</h2>
-  <a href="">"Not Sure" "Button"</a>
+<section id="csstransfer">
+  <h2>Home Page</h2>
+  <a href="">"To be added"</a>
 </section>`;

@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-#jumbotron > a {
+#csstransfer > a {
   text-decoration: none;
   background-color: white;
   font-size: 1.5em;
@@ -109,7 +109,7 @@ footer {
 }
 
 @media (min-width: 550px){
-  #jumbotron {
+  #csstransfer {
     height: 60vh;
   }
 
