@@ -1,13 +1,18 @@
 export default () => `
 <section id="csstransfer">
-<form id="register" method="POST" action="">
-  <div>
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" placeholder="Url">
+<form action="/action_page.php">
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" placeholder="Enter email" id="email">
   </div>
-  <div>
-    <label for="password">Password:</label>
-    <input type="text" name="password" id="password">
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" placeholder="Enter password" id="pwd">
   </div>
-  <input type="submit" name="register" value="Click here">
-</form>`;
+  <div class="form-group form-check">
+    <label class="form-check-label">
+      <input class="form-check-input" type="checkbox"> Remember me
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
