@@ -1,19 +1,7 @@
 export default () => `
 <section id="bio">
     <h2>My Bio</h2>
-    <!DOCTYPE html>
-<html>
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="Coder Bio" content="width=device-width">
-    <header>
-    <title>Procode Bio</title>
-  </header>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
     <h1>Professional Link Biohub</h1>
-    <script src="index.js"></script>
     <body>
 <h2 class="purple">Professional Bio Linkhub</h2>
 <br>
@@ -32,12 +20,6 @@ export default () => `
   <img src="imgs/social media cert.png" alt="Agile Certification" width="30%" height="auto">
 
 </h4></ol>
-
-    </body>
-    <footer>
-This is the footer section
-    </footer>
   </body>
-</html>
 </p>
   </section>`;
