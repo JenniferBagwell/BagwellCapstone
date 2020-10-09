@@ -1,4 +1,4 @@
-#jumbotron {
+#csstransfer {
   background-image: url("imgs/procodebackground.png"); /* The image used */
   background-color: black; /* Used if the image is unavailable */
   background-size: cover;
@@ -9,7 +9,7 @@
   height: 90vh;
 }
 
-#jumbotron > h2 {
+#csstransfer > h2 {
   color: white;
   text-align: center;
 }
