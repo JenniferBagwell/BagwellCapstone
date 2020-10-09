@@ -9,4 +9,3 @@ export default links => `
     .join("")}
   </ul>
 </nav>`;
-<link rel="stylesheet" href="./style.css">
