@@ -2,14 +2,14 @@ body	{ background:url(imgs/procodebackground.png) top right no-repeat; backgroun
   background-size: cover; }
 
   p {
-    border: 2px solid darkblue;
+    border: 2px solid whitesmoke;
     padding: 30px;
     font-size: larger;
     max-width: 80%;
     background-color: lightgrey;
   }
   h1 {
-    border: 2px solid black;
+    border: 2px solid white;
     padding: 30px;
     max-width: 80%;
     text-align: center;
@@ -21,10 +21,10 @@ body	{ background:url(imgs/procodebackground.png) top right no-repeat; backgroun
     padding: 30px;
     text-align: center;
     background-color: lightgrey;
-    color: darkblue;
+    color: white;
   }
 .purple{
-  color:purple;
+  color:white;
   padding: 30px;
   max-width: 80%;
 }
