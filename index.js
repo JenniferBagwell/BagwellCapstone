@@ -5,7 +5,7 @@ import { Header, Nav, Main, Footer } from "./components";
 import axios from "axios";
 
 axios
-  .get("https://jsonplaceholder.typicode.com/posts")
+  .get("https://procode.bio/post.com")
   // handle the response from the API
   .then(response => {
     // for each post in the response Array,
