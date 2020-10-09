@@ -3,7 +3,8 @@ export default {
   view: "Gallery",
   pictures: [
     {
-      url: "img/agilecert.png",
+      url:
+        "https://images.unsplash.com/photo-1505628346881-b72b27e84530?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       title: "Agile Certification"
     },
     {
