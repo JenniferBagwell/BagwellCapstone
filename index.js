@@ -3,6 +3,7 @@ import { capitalize } from "lodash";
 import * as state from "./store";
 import { Header, Nav, Main, Footer } from "./components";
 import axios from "axios";
+import "./env";
 
 axios
   .get("https://jsonplaceholder.typicode.com/posts")
@@ -30,9 +31,9 @@ axios
   });
 
 axios
-  .get(`https://api.github.com/users/cbrantley/repos`, {
+  .get(`https://api.github.com/users/JenniferBagwell/repos`, {
     headers: {
-      Authorization: `token 83a3d94c2cd572128cf2f90dc1ccd67e5b912824`
+      Authorization: `token 381cf96a5c2619ed85b62c67e7768191da199f9e`
     }
   })
   .then(response => console.log(response.data));
