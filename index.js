@@ -22,18 +22,20 @@ axios
 
 axios
   .get(
-    "https://api.openweathermap.org/data/2.5/weather?q=st%20louis&APPID=fbb30b5d6cf8e164ed522e5082b49064"
+    `https://api.openweathermap.org/data/2.5/weather?APPID=${process.env.OPEN_WEATHER_API_KEY}&q=st.%20louis`
   )
   .then(response => {
     state.Home.weather.city = response.name;
     state.Home.weather.temp = response.main.temp;
-    state.Home.weather.description = response.weather.main;
-  });
+    state.Home.weather.feelsLike = response.data.main.fells_like;
+    state.Home.weather.description = response.data.weather[0].main;
+  })
+  .catch(err => console.log(err));
 
 axios
   .get(`https://api.github.com/users/JenniferBagwell/repos`, {
     headers: {
-      Authorization: `token 381cf96a5c2619ed85b62c67e7768191da199f9e`
+      Authorization: `${process.env.GITHUB_TOKEN}`
     }
   })
   .then(response => console.log(response.data));

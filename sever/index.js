@@ -9,70 +9,73 @@ const PORT = 4040;
 
 const server = http.createServer((request, response) => {
   if (request.url.startsWith("/posts")) {
-    const server = http.createServer((request, response) => {
-      // set the content type for our response
-      response.setHeader("Content-Type", "application/json");
+    // use the request method to access the corresponding handler
+    const handler = HANDLERS[request.method];
 
-      if (request.url.startsWith("/posts")) {
-        // use the request method to access the corresponding handler
-        const handler = HANDLERS[request.method];
-
-        // if the handler function exists,
-        if (handler) {
-          // handle the request and response
-          handler(request, response);
-        } else {
-          // if request method not found in the HANDLERS object,
-          notFound(response);
-        }
-      } else {
-        // if request url doesn't start with "/posts",
-        notFound(response);
-      }
-    });
+    // if the handler function exists,
+    if (handler) {
+      // handle the request and response
+      handler(request, response);
+    } else {
+      // if request method not found in the HANDLERS object,
+      notFound(response);
+    }
+  } else {
+    // if request url doesn't start with "/posts",
+    notFound(response);
+  }
+});
 
 server.listen(PORT);
 console.log(`Listening on port ${PORT}`);
 
 const HANDLERS = {
-  GET(request, response) {
-    // get "posts" collection
-    const posts = db.get("posts");
-    // send ok response with posts data
-    ok(response, { posts: posts.value() })
-  }
-}
-
-    const internalServerError = (response) => {
-      response.writeHead(500);
-      response.write(JSON.stringify({ message: "Internal Server Error" }));
-      response.end();
-    };
-
-    const ok = (response, payload) => {
-      response.writeHead(200);
-      response.write(JSON.stringify(payload));
-      response.end();
-};
-
-const HANDLERS = {
+  // notice the capitalization!
   POST(request, response) {
     // construct contents of request data
-    let contents = ""
-    request.on("data", (chunk) => (contents += chunk));
+    let contents = "";
+    request.on("data", chunk => (contents += chunk));
 
     request.on("end", () => {
       // create/write new post in the db
-      const post = db.get("posts").insert({ body: contents }).write();
+      const post = db
+        .get("posts")
+        .insert({ body: contents })
+        .write();
       // send ok response with constructed post data
       ok(response, post);
     });
-
     // use internal server error response if error interrupts request
     request.on("error", () => internalServerError(response));
-  }
-}
-const HANDLERS {
+  },
+  GET(request, response) {
+    const posts = db.get("posts");
+
+    if (request.url === "/posts") {
+      // only send back the entire collection when the URL matches /posts exactly
+      ok(response, { posts: posts.value() });
+    } else {
+      // otherwise, split up the url by '/' to try to find a post ID
+      const parts = request.url.split("/");
+
+      // TODO: explore better ways to do this!
+      if (parts.length === 3) {
+        const id = parts.pop();
+        const post = posts.getById(id).value();
+
+        // if a post exists with that ID,
+        if (post) {
+          ok(response, post);
+        } else {
+          // if no post found with that ID,
+          notFound(response);
+        }
+      } else {
+        // if more than 3 parts to the request url,
+        notFound(response);
+      }
+    }
+  },
   PATCH(request, response) {
     const parts = request.url.split("/");
 
@@ -80,13 +83,16 @@ const HANDLERS {
     if (parts.length === 3) {
       // ...and construct the contents of the request data
       let contents = "";
-      request.on("data", (chunk) => (contents += chunk));
+      request.on("data", chunk => (contents += chunk));
 
       request.on("end", () => {
         const id = parts.pop();
 
         // updateById returns a post only if one already exists with that ID
-        const post = db.get("posts").updateById(id, { body: contents }).write();
+        const post = db
+          .get("posts")
+          .updateById(id, { body: contents })
+          .write();
 
         if (post) {
           ok(response, post);
@@ -100,15 +106,16 @@ const HANDLERS {
       notFound(response);
     }
   },
-}
-const HANDLERS {
   DELETE(request, response) {
     const parts = request.url.split("/");
 
     if (parts.length === 3) {
       const id = parts.pop();
       // like updateById, removeById will only return a post if a post exists with that ID
-      const post = db.get("posts").removeById(id).write();
+      const post = db
+        .get("posts")
+        .removeById(id)
+        .write();
 
       if (post) {
         ok(response, post);
@@ -118,8 +125,8 @@ const HANDLERS {
     } else {
       notFound(response);
     }
-  },
-}
+  }
+};
 
 // use FileSync to create an adapter linked to a .json file
 const adapter = new FileSync(path.join(__dirname, "db.json"));
@@ -129,3 +136,21 @@ const db = lowdb(adapter);
 db._.mixin(lodashId);
 // create a collection for blog posts and write it to the db
 db.defaults({ posts: [] }).write();
+
+const notFound = response => {
+  response.writeHead(404);
+  response.write(JSON.stringify({ message: "Not Found" }));
+  response.end();
+};
+
+const internalServerError = response => {
+  response.writeHead(500);
+  response.write(JSON.stringify({ message: "Internal Server Error" }));
+  response.end();
+};
+
+const ok = (response, payload) => {
+  response.writeHead(200);
+  response.write(JSON.stringify(payload));
+  response.end();
+};
