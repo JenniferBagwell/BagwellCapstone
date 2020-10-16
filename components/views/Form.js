@@ -1,4 +1,4 @@
-export default () => `
+export default st => `
 <form
   action="https://formspree.io/f/xeqpqlvq"
   method="POST"
@@ -15,4 +15,4 @@ export default () => `
   <!-- your other form fields go here -->
 
   <button type="submit">Send</button>
-</form>;
+</form> `;
