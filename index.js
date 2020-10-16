@@ -22,10 +22,13 @@ axios
 
 axios
   .get(
-    `API goes here`
+    `https://api.openweathermap.org/data/2.5/weather?APPID=${process.env.OPEN_WEATHER_API_KEY}&q=st.%20louis`
   )
   .then(response => {
-api stuff
+    state.Home.weather.city = response.name;
+    state.Home.weather.temp = response.main.temp;
+    state.Home.weather.feelsLike = response.data.main.fells_like;
+    state.Home.weather.description = response.data.weather[0].main;
   })
   .catch(err => console.log(err));
 
