@@ -1,4 +1,4 @@
 export default {
   header: "Forms",
-  view: "Form"
+  view: "Forms"
 };
