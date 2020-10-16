@@ -1,8 +1,8 @@
 export default () => `
 <section id="csstransfer">
 <section id="bio">
-    <h2>My Bio</h2>
-    <h1>Professional Link Biohub</h1>
+    <h1>Jennifer Bagwell</h1>
+    <h2>Last updated 10/15/2020</h2>
     <body>
 <h2 class="white">Professional Bio Linkhub</h2>
 <br>

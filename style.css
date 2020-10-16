@@ -1,6 +1,6 @@
 #csstransfer {
   background-image: url("imgs/procodebackground.png"); /* The image used */
-  background-color: black; /* Used if the image is unavailable */
+  background-color:grey; /* Used if the image is unavailable */
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,9 @@ footer {
 }
 
 #bio {
-  margin: 1rem;
+  width: 40%;
+  margin: .5rem;
+  margin-right: auto;
 }
 
 #gallery {
