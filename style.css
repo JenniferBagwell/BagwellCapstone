@@ -14,6 +14,15 @@
   text-align: center;
 }
 
+h1 {
+  color: black;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 1px;
+  }
+
 #csstransfer > a {
   text-decoration: none;
   background-color: white;
@@ -50,7 +59,6 @@ bio {
   width: 40%;
   margin: .5rem;
   margin-right: auto;
-  margin-top: 200px;
 }
 bio {
   border: solid 1px black;
