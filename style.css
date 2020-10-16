@@ -46,10 +46,16 @@ footer {
   margin: 1rem 1rem;
 }
 
-#bio {
+bio {
   width: 40%;
   margin: .5rem;
   margin-right: auto;
+}
+bio {
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 1rem;
 }
 
 #gallery {
