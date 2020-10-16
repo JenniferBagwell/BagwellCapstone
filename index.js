@@ -33,7 +33,7 @@ axios
   .catch(err => console.log(err));
 
 axios
-  .get(`https://api.github.com/users/JenniferBagwell/repos`, {
+  .get(`https://api.github.com/users/cbrantley/repos`, {
     headers: {
       Authorization: `${process.env.GITHUB_TOKEN}`
     }
