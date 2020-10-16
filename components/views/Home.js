@@ -1,5 +1,7 @@
 export default () => `
 <section id="csstransfer">
-  <h2>Home Page</h2>
-  <a href="">"To be added"</a>
+  <h2>ProCode Bio</h2>
+  <video width="320" height="240">
+  <source src="imgs/ProCodeBio" type="video/mp4"></video>
+  <im href="">More To Come</source>
 </section>`;
