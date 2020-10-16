@@ -50,6 +50,7 @@ bio {
   width: 40%;
   margin: .5rem;
   margin-right: auto;
+  margin-top: 25px;
 }
 bio {
   border: solid 1px black;
