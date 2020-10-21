@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 app.route("/api/getPosts").get((req, res) => {
-  pool.query("SELECT * FROM post", (err, post) => {
+  pool.query("SELECT * FROM public.post", (err, posts) => {
     console.log(posts);
     if (err) {
       res.status(500).json({ err });
