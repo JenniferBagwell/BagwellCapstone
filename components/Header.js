@@ -1,5 +1,5 @@
 export default st => `
 <header>
-  <h1>${st.header}</h1>
+  <h2>${st.header}</h2>
   </header>
   `;
