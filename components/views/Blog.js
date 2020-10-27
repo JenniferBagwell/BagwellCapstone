@@ -12,7 +12,7 @@ ${st.posts
 function formatBlogPost(post) {
   return `
   <div class="blog-post">
-    <h4>${capitalize(post.title)} by User ${post.userId}</h4>
-    <p>${capitalize(post.body)}</p>
+    <h4>${capitalize(post.title)} by User ${post.userid}</h4>
+    <p>${capitalize(post.post)}</p>
   </div>`;
 }

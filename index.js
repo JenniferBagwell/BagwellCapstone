@@ -6,7 +6,7 @@ import axios from "axios";
 import "./env";
 
 axios
-  .get("https://jsonplaceholder.typicode.com/posts")
+  .get("")
   // handle the response from the API
   .then(response => {
     // for each post in the response Array,
