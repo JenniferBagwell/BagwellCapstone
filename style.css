@@ -15,7 +15,7 @@
 }
 
 h1 {
-  color: blue;
+  color: whitesmoke;
   font-family: arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
@@ -162,6 +162,6 @@ bio {
   #gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
-    background-color: white;
+    background-color: grey;
   }
 }

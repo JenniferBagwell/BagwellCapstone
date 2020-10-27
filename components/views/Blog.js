@@ -1,5 +1,4 @@
 import { capitalize } from "lodash";
-<section id="csstransfer"></section>
 export default st => `
 <section id="blog">
 ${st.posts

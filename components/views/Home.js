@@ -1,5 +1,5 @@
 export default () => `
 <section id="csstransfer">
-  <h2>ProCode Bio</h2>
-  <im href="">More To Come</source>
+  <h1>ProCode Bio</h1>
+  <h2>More To Come</h2>
 </section>`;

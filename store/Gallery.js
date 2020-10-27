@@ -3,7 +3,7 @@ export default {
   view: "Gallery",
   pictures: [
     {
-      url: "https://cdn.filestackcontent.com/KHQdRsg4TTmFRX8WYSQ9",
+      url: "https://cdn.filestackcontent.com/KHQdRsg4TTmFRX8WYSQ9" width="107" height="98",
       title: "Agile Cert"
     },
     {
