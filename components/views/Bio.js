@@ -15,6 +15,9 @@ export default () => `
   <li><a href="https://trello.com/b/yCWNgWGD/bagwell-capstone-kanban"> My Trello Board </a></li>
   <li><a href="https://github.com/JenniferBagwell"> Previous Contract Work </a></li>
 
+  <p>
+  <a href="https://cdn2.hubspot.net/hubfs/408309/Bootcamp_SLM-19/Presentations/SPS_BBC_SLM19_Presentation_Bagwell,%20Jennifer.pdf">Free online Social Media Bootcamp Program</a>
+  </p>
   </h4>
 </ol>
   </body>
