@@ -1,4 +1,4 @@
 export default {
-  header: "This is Jennifer Bagwell's Professional Coding Bio",
+  header: "My Bio",
   view: "Bio"
 };
