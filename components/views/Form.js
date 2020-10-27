@@ -5,6 +5,7 @@ export default st => `
   method="POST"
 >
   <label>
+  Contact me for more info:
     Your email:
     <input type="text" name="_replyto">
   </label>
