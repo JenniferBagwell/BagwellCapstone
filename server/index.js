@@ -1,7 +1,10 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
 const pool = require("./db");
+
+mongoose.connect("mongodb://localhost/test");
 
 app.use(cors());
 app.use(express.json());
