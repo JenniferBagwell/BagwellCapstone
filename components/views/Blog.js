@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>User List</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>User List</h1>
-    <ul>
-      <%
-        var list = '';
-        for (i = 0; i < userlist.length; i++) {
-          list += '<li><a href="mailto:' + userlist[i].email + '">' + userlist[i].username + '</a></li>';
-        }
-      %>
-      <%- list %>
-    </ul>
-  </body>
-</html>
+import { capitalize } from "lodash";
+export default st => `
+<section id="blog">
+
+${st.posts
+  .map(post => {
+    return formatBlogPost(post);
+  })
+  .join()}
+</section>`;
+
+function formatBlogPost(post) {
+  return `
+  <div class="blog-post">
+    <h4>${capitalize(post.title)} by User ${post.userid}</h4>
+    <p>${capitalize(post.post)}</p>
+  </div>`;
+}
