@@ -80,8 +80,9 @@ bio {
 #gallery img {
   display: block;
   height: auto;
-  width: 92.5%;
+  width: 50%;
   margin: auto;
+  border-radius: 8px;
 }
 
 @media (max-width: 549px){
