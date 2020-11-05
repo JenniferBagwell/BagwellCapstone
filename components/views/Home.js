@@ -4,17 +4,17 @@ export default () => `
   <!DOCTYPE html>
 <html>
 <head>
-<!-- The video -->
-<video autoplay muted loop id="myVideo">
-  <source src="rain.mp4" type="video/mp4">
-</video>
+<body>
+<div class="video-container">
 
-<!-- Optional: some overlay text to describe the video -->
-<div class="content">
-  <h1>Heading</h1>
-  <p>WELCOME</p>
-  <!-- Use a button to pause/play the video with JavaScript -->
-  <button id="myBtn" onclick="myFunction()">Pause</button>
+<video autoplay loop muted width="100%">
+    <source src="Path To mp4 Video" type="imgs/background bio.mp4" />
+    <source src="Path To mp4 Video" type="video/mp4" />
+</video>
+<div >
+    <img src="path to Image" alt="">
+</div>
+<!-- If Videos are not supported this image will act as cover image-->
 </div>
 
 </body>
