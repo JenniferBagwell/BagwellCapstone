@@ -1,6 +1,11 @@
 // in store/Blog.js
 export default {
-  header: "My Blog",
+  header: "My blog",
   view: "Blog",
-  posts: []
+  weather: {
+    city: "",
+    description: "",
+    temp: 0,
+    feelsLike: 0
+  }
 };
