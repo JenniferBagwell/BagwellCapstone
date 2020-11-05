@@ -1,5 +1,12 @@
 import { capitalize } from "lodash";
 export default st => `
+
+<h4>Weather in ${st.weather.city}: ${
+  st.weather.description
+} // ${kelvinToFahrenheit(st.weather.temp)}F, feels like ${kelvinToFahrenheit(
+  st.weather.feelsLike
+)}F</h4>
+
 <section id="blog">
 
 ${st.posts
