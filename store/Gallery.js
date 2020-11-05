@@ -3,12 +3,13 @@ export default {
   view: "Gallery",
   pictures: [
     {
-      url: "https://cdn.filestackcontent.com/KHQdRsg4TTmFRX8WYSQ9",
+      url:
+        "https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/social%20media%20cert%20(1).png?raw=true",
       title: "Agile Cert"
     },
     {
       url:
-        "https://hubspot-academy.s3.amazonaws.com/prod/tracks/user-badges/a71b88d4486f47258c5be3325e9bc365-1586536735898.png",
+        "https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/hubspot%20ac.png?raw=true",
       title: "Social Media Marketing Certification"
     }
   ]
