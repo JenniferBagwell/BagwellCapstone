@@ -75,6 +75,7 @@ bio {
   padding: 5px;
   width: 150px;
   background: darkgrey;
+  flex-direction: row;
 }
 
 #gallery > * {
