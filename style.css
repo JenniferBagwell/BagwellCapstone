@@ -23,6 +23,10 @@ h1 {
   margin-bottom: 1px;
   }
 
+  h4 {
+    color: white;
+  }
+
 #csstransfer > a {
   text-decoration: none;
   background-color: white;

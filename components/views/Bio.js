@@ -1,5 +1,4 @@
 export default () => `
-<section id="csstransfer">
 <section id="bio">
     <h2>Jennifer Bagwell</h2>
     <h2>Last updated 10/15/2020</h2>
