@@ -60,6 +60,7 @@ bio {
   width: 40%;
   margin: .5rem;
   margin-right: auto;
+  background: darkgrey;
 }
 bio {
   border: solid 1px black;
@@ -71,6 +72,7 @@ bio {
 #gallery {
   border: solid 1px black;
   clear: both;
+  background: darkgrey;
 }
 
 #gallery > * {
