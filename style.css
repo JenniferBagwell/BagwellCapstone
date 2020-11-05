@@ -1,5 +1,5 @@
 #csstransfer {
-  background-image: url("imgs/background bio.mp4"); /* The image used */
+  background-image: url("imgs\background bio.mp4"); /* The image used */
   background-color:grey; /* Used if the image is unavailable */
   background-size: cover;
   display: flex;
