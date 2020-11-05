@@ -66,6 +66,7 @@ bio {
   display: flex;
   flex-direction: column;
   margin: 1rem 1rem;
+  background-color: grey;
 }
 
 #gallery {
@@ -87,6 +88,7 @@ bio {
   padding: 5px;
   width: 15%;
   border-radius: 8px;
+  flex-direction: row;
 }
 
 @media (max-width: 549px){
