@@ -32,24 +32,7 @@ axios
   })
   .catch(err => console.log(err));
 
-  import axios from "axios";
-
-  const options = {
-    method: 'GET',
-    url: 'https://rapidapi.p.rapidapi.com/api/v1/regions',
-    headers: {
-      'x-rapidapi-key': '9d510aa219mshd7004d0e0c9f7c5p1bd195jsn4bdc232bfdeb',
-      'x-rapidapi-host': 'coronavirus-map.p.rapidapi.com'
-    }
-  };
-
-  axios.request(options).then(function (response) {
-    console.log(response.data);
-  }).catch(function (error) {
-    console.error(error);
-  });
-
-  axios
+axios
   .get(`https://api.github.com/users/JenniferBagwell/repos`, {
     headers: {
       Authorization: `${process.env.GITHUB_TOKEN}`
