@@ -5,7 +5,7 @@ export default () => `
 <head>
 <!-- The video -->
 <video autoplay muted loop id="myVideo">
-  <source src="imgs/background bio.mp4" type="video/mp4">
+  <source src="https://player.vimeo.com/external/183300007.sd.mp4" type="video/mp4">
 </video>
 
 <!-- Optional: some overlay text to describe the video -->
