@@ -73,7 +73,6 @@ bio {
   border-radius: 4px;
   padding: 5px;
   width: 150px;
-  clear: both;
   background: darkgrey;
 }
 
@@ -127,7 +126,7 @@ bio {
 
   #gallery {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 }
@@ -168,7 +167,7 @@ bio {
 
   #gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(33%, 1fr));
     background-color: grey;
   }
 }
