@@ -1,22 +1,6 @@
 export default () => `
-<h2>ProCode Bio</h2>
-  <!DOCTYPE html>
-<html>
-<head>
-<!-- The video -->
-<video autoplay muted loop id="myVideo">
-  <source url("imgs/background bio.mp4") type="video/mp4">
-</video>
-
-<!-- Optional: some overlay text to describe the video -->
-<div class="content">
-  <h1>Heading</h1>
-  <p>Lorem ipsum...</p>
-  <!-- Use a button to pause/play the video with JavaScript -->
-  <button id="myBtn" onclick="myFunction()">Pause</button>
-</div>
-
-</body>
-</html>
+<section id="csstransfer">
+  <h2>ProCode Bio</h2>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/c6KtfHEAScc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <h2>More To Come</h2>
 </section>`;
