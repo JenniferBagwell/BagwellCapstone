@@ -7,6 +7,8 @@ export default st => `
 <section id="csstransfer">
   <h2>Procode Bio Blog</h2>
   <a href="">"Sign up for alerts" "Button"</a>
+  <br>
+  <img src="https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/localhost%20new%20user%20server.png?raw=true"></a>
 </section>`;
 
 const kelvinToFahrenheit = kelvinTemp =>
