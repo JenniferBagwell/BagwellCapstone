@@ -7,8 +7,9 @@ export default {
       title: "Agile Cert"
     },
     {
-      url: "img url here",
-      title: "to be added"
+      url:
+        "https://hubspot-academy.s3.amazonaws.com/prod/tracks/user-badges/a71b88d4486f47258c5be3325e9bc365-1586536735898.png",
+      title: "Social Media Marketing Certification"
     }
   ]
 };
