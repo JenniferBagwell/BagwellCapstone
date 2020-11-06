@@ -8,7 +8,7 @@ export default st => `
   <h2>Procode Bio Blog</h2>
   <a href="">"Sign up for alerts" "Button"</a>
   <br>
-  <p>The td element defines a cell in a table:</p>
+  <p><h2>MY working server on my computer</h2></p>
 
 <table>
   <tr>
@@ -16,6 +16,8 @@ export default st => `
     <td>  <img src="https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/localhost%20userlist.png?raw=true"></a></td>
   </tr>
 </table>
+  <img src="https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/localhost%20new%20user%20server.png?raw=true"></a>
+  <img src="https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/localhost%20userlist.png?raw=true"></a>
 </section>`;
 
 const kelvinToFahrenheit = kelvinTemp =>
