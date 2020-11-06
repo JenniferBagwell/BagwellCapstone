@@ -6,7 +6,7 @@ export default st => `
 )}F</h3>
 <section id="csstransfer">
   <h2>Procode Bio Blog</h2>
-  <a href="">"Sign up for alerts" "Button"</a>
+  <a href="https://procode.bio/Form">"Sign up for alerts" "Button"</a>
   <br>
   <p><h2>MY working server on my computer</h2></p>
 
