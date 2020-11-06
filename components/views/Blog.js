@@ -5,7 +5,7 @@ export default st => `
   st.weather.feelsLike
 )}F</h3>
 <section id="csstransfer">
-  <h2>Procode Bio Blog</h2>
+  <h1>Procode Bio Blog</h1>
   <br>
   <a href="https://procode.bio/Form">"Sign up for alerts" "Button"</a>
   <br>

@@ -19,7 +19,7 @@ export default () => `
   <p>
   <a href="https://cdn2.hubspot.net/hubfs/408309/Bootcamp_SLM-19/Presentations/SPS_BBC_SLM19_Presentation_Bagwell,%20Jennifer.pdf">Free online Social Media Bootcamp Program</a>
   <br>
-  <a href="https://procode.bio/Form">"Sign up for alerts" "Button"</a>
+  <a href="https://procode.bio/Form">"Sign up for alerts"</a>
   </p>
   </h4>
 </ol>
