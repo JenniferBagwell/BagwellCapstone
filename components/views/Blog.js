@@ -12,12 +12,12 @@ export default st => `
 
 <table>
   <tr>
-    <td>  <img src="https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/localhost%20new%20user%20server.png?raw=true"></a></td>
     <td>  <img src="https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/localhost%20userlist.png?raw=true"></a></td>
   </tr>
-</table>
+<tr>
   <img src="https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/localhost%20new%20user%20server.png?raw=true"></a>
-  <img src="https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/localhost%20userlist.png?raw=true"></a>
+  </tr>
+  </table>
 </section>`;
 
 const kelvinToFahrenheit = kelvinTemp =>
