@@ -1,7 +1,7 @@
 export default () => `
 <section id="bio">
     <h2>Jennifer Bagwell</h2>
-    <h2>Last updated 10/15/2020</h2>
+    <h2>Last updated 11/07/2020</h2>
     <body>
 <h2 class="white">Professional Bio Linkhub</h2>
 <br>
