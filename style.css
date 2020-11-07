@@ -157,6 +157,7 @@ bio {
     display: flex;
     justify-content: space-evenly;
     padding: 0 0;
+    background-image: url("https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/nav%20background.png?raw=true");
   }
 
   nav > ul > li {
@@ -168,7 +169,7 @@ bio {
     color: #b6d9de;
     margin: 0;
     box-shadow: inset 0px 1px 3px 0px #3d768a;
-    background-image: url("https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/nav%20background.png?raw=true");
+    background:linear-gradient(to bottom, #b6d9de 5%, #ddf0f3 100%);
   }
 
   nav > .fa-bars {
