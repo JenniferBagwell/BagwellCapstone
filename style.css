@@ -1,6 +1,6 @@
 #csstransfer {
   background-image: url("imgs/procodebackground.png"); /* The image used */
-  background-color:grey; /* Used if the image is unavailable */
+  background-color: grey; /* Used if the image is unavailable */
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -21,11 +21,11 @@ h1 {
   font-weight: bold;
   margin-top: 0px;
   margin-bottom: 1px;
-  }
+}
 
-  h4 {
-    color: white;
-  }
+h4 {
+  color: white;
+}
 
 #csstransfer > a {
   text-decoration: none;
@@ -34,7 +34,6 @@ h1 {
   padding: 1.5rem;
   border-radius: 10px;
 }
-
 
 form {
   border: solid 1px white;
@@ -45,12 +44,12 @@ form {
 }
 
 form > * {
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
-form > input[type=submit] {
+form > input[type="submit"] {
   width: 40%;
-  margin: .5rem;
+  margin: 0.5rem;
   margin-right: auto;
 }
 
@@ -62,7 +61,7 @@ footer {
 
 bio {
   width: 40%;
-  margin: .5rem;
+  margin: 0.5rem;
   margin-right: auto;
 }
 bio {
@@ -96,7 +95,7 @@ bio {
   flex-direction: row;
 }
 
-@media (max-width: 549px){
+@media (max-width: 549px) {
   .hidden--mobile {
     display: none !important;
   }
@@ -109,7 +108,7 @@ bio {
 
   nav > i {
     padding: 1rem;
-    font-size: 2em;
+    font-size: 4em;
   }
 
   nav > ul {
@@ -120,7 +119,7 @@ bio {
   }
 
   nav > ul > li {
-    padding: .5rem;
+    padding: 0.5rem;
     list-style-type: none;
   }
 
@@ -138,7 +137,7 @@ bio {
   }
 }
 
-@media (min-width: 550px){
+@media (min-width: 550px) {
   #csstransfer {
     height: 60vh;
   }
@@ -153,7 +152,7 @@ bio {
     display: inline-block;
     text-decoration: none;
     border: 1px solid;
-    padding: .5rem .5rem;
+    padding: 0.5rem 0.5rem;
     border-radius: 25px;
   }
 
