@@ -37,12 +37,12 @@ h4 {
 
 /* Header/Logo Title */
 header {
-  padding: 5px;
+  padding: 2px;
   text-align: center;
   background: #e4e7ed;
   background-image: url("https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/header%20background.png?raw=true");
   color: black;
-  font-size: 30px;
+  font-size: 20px;
   font: Helvetica;
 }
 
