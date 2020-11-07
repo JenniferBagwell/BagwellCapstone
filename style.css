@@ -65,9 +65,11 @@ form > input[type="submit"] {
 }
 
 footer {
-  border-top: solid 1px black;
+  border-top: solid 1p white;
   padding: 2rem 2rem 4rem;
   margin: 1rem 1rem;
+  background-image: url("https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/header%20background.png?raw=true");
+
 }
 
 bio {
