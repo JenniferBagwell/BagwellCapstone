@@ -35,6 +35,16 @@ h4 {
   border-radius: 10px;
 }
 
+/* Header/Logo Title */
+header {
+  padding: 5px;
+  text-align: center;
+  background: #e4e7ed;
+  color: black;
+  font-size: 30px;
+  font: Helvetica;
+}
+
 form {
   border: solid 1px white;
   display: flex;
