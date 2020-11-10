@@ -33,7 +33,6 @@ More of a description to be added
 8. Progress and agile story using Trello
 9. Netify for hosting
 10. Github for hosting and team building of repo
-11.
 
 
 # Plus
