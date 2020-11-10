@@ -1,23 +1,71 @@
 const express = require("express");
-const mongoose = require("mongoose");
-const app = express();
+const bodyParser = require("body-parser");
 const cors = require("cors");
-const pool = require("./db");
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost:27017/nodetest1");
+const db = mongoose.connection;
 
-mongoose.connect("mongodb://localhost/test");
+const app = express();
+const port = 3000;
 
+app.use(bodyParser.json());
 app.use(cors());
-app.use(express.json());
 
-app.route("/api/getPosts").get((req, res) => {
-  pool.query("SELECT * FROM public.post", (err, posts) => {
-    console.log(posts);
-    if (err) {
-      res.status(500).json({ err });
-    } else {
-      res.status(200).send({ posts: posts.rows });
-    }
-  });
+let db_status = "MongoDB connection not successful, omg!";
+
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", () => (db_status = "Successful opened connection to Mongo!"));
+
+const userCollectionSchema = new mongoose.Schema({
+  username: String,
+  email: String
 });
 
-app.listen(8675, () => console.log("Listening on port 8675"));
+const Users = mongoose.model("usercollection", userCollectionSchema);
+
+app.get("/", (req, res) => res.send(db_status));
+
+app.route("/api/getPosts").get((req, res) => {
+  res.status(200).send("yo");
+});
+
+// app.post("/posts", (req, res) => {
+//   const newPost = new Post(req.body);
+//   newPost.save((error, post) => {
+//     return error ? res.sendStatus().json(error) : res.json(post);
+//   });
+// });
+
+// app.get("/posts", (req, res) => {
+//   Post.find({}, (error, data) => {
+//     if (error) return res.sendStatus(500).json(error);
+//     return res.json(data);
+//   });
+// });
+
+// app.get("/posts/:postId", (req, res) => {
+//   Post.findById(req.params.postId, (error, data) => {
+//     if (error) return res.sendStatus(500).json(error);
+//     return res.json(data);
+//   });
+// });
+
+// app.put("/posts/:postId", (req, res) => {
+//   Post.findByIdAndUpdate(
+//     req.params.postId,
+//     { $set: { title: req.body.title, body: req.body.body } },
+//     (error, data) => {
+//       if (error) return res.sendStatus(500).json(error);
+//       return res.json(req.body);
+//     }
+//   );
+// });
+
+// app.delete("/posts/:postId", (req, res) => {
+//   Post.findByIdAndDelete(req.params.postId, {}, (error, data) => {
+//     if (error) return res.sendStatus(500).json(error);
+//     return res.json(data);
+//   });
+// });
+
+app.listen(port, () => console.log(`Example app listening of port ${port}`));
