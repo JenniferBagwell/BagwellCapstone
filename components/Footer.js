@@ -9,8 +9,8 @@ export default () => `
   </div>
 
   <i class="Socal Hub"></i>
-  <img src="https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/fblogo.png?raw=trueng"</a>
-  <img src="https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/lnlogo.png?raw=trueng"</a>
+  <a href="https://www.facebook.com/JennDawB"><img src="https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/fblogo.png?raw=trueng"</a>
+  <a href="https://www.linkedin.com/in/jenniferbagwell808/"><img src="https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/lnlogo.png?raw=trueng"</a>
   </div>
 </footer>
 `;
