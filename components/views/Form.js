@@ -5,7 +5,7 @@ export default st => `
   method="POST"
 >
   <label>
-  Sign up for our Newsletter and New Account info
+  Sign up for ProCode.bio Newsletter and New Account info
   </label>
   <label>
   Your Full Name:
