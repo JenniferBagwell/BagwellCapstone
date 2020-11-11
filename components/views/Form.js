@@ -5,14 +5,18 @@ export default st => `
   method="POST"
 >
   <label>
-  Contact me for more info
+  Sign up for our Newsletter and New Account info
   </label>
+  <label>
+  Your Full Name:
+  <input type="text" name="_replyto">
+</label>
   <label>
     Your email:
     <input type="text" name="_replyto">
   </label>
   <label>
-    Your message:
+    Your Message:
     <textarea name="message"></textarea>
   </label>
 
