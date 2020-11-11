@@ -1,13 +1,17 @@
 export default () => `
 <section id="bio">
-    <h2>Jennifer Bagwell</h2>
-    <h2>Last updated 11/07/2020</h2>
-    <body>
-<h2 class="white">Professional Bio Linkhub</h2>
-<br>
-<p>This is my professional savvycoders bio. From here can you access my savvycoder profiles through the links provided. There is also a list of all my currant professional Certifications. This professional coder bio will be updated as I continue to build my coding career.</p>
-<h3>My professional coding links</h3>
+<table>
+  <tr>
+    <td><h2>Jennifer Bagwell</h2></td>
+    <td><h2>Last updated 11/07/2020</h2></td>
+    <td><img src="https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/bagwell%20pic%20150%20150.png?raw=true"></a>
+  </tr>
+  <tr>
+    <td><h2 class="white">Professional Bio Linkhub</h2></td>
+    <td colspan="2"><p>This is my professional savvycoders bio. From here can you access my savvycoder profiles through the links provided. There is also a list of all my currant professional Certifications. This professional coder bio will be updated as I continue to build my coding career.</p></td>
+    </table>
 
+<h3>My professional coding links</h3></td>
 <ol><h4>
 <li><a href="https://www.linkedin.com/in/jenniferbagwell808/"> My LinkedIn </a></li>
 <li><a href="https://www.facebook.com/JennDawB"> Facebook </a></li>
