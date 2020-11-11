@@ -196,3 +196,9 @@ bio {
     background-color: grey;
   }
 }
+.myDiv {
+  border: 5px outset white;
+  background-color: lightgrey;
+  text-align: center;
+  font: helvecia;
+}

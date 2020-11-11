@@ -23,5 +23,5 @@ export default st => `
   <!-- your other form fields go here -->
 
   <button type="submit">Send</button>
-</form> `;
+</form>
 </section>`;
