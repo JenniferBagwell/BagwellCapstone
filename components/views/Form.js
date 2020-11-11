@@ -24,3 +24,4 @@ export default st => `
 
   <button type="submit">Send</button>
 </form> `;
+</section>`;
