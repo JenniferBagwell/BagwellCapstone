@@ -200,5 +200,7 @@ bio {
   border: 5px outset white;
   background-color: lightgrey;
   text-align: center;
+  max-width: 150px;
+
   font: helvecia;
 }
