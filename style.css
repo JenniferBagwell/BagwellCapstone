@@ -2,7 +2,7 @@
   background-image: url("imgs/procodebackground.png"); /* The image used */
   background-color: grey; /* Used if the image is unavailable */
   background-size: cover;
-  display: fixed;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -204,5 +204,4 @@ bio {
   max-width: 850px;
   font-size: 10px;
   font: helvecia;
-  height: 90vh;
 }
