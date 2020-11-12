@@ -11,11 +11,11 @@ export default {
       url:
         "https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/hubspot%20ac.png?raw=true",
       title: "Social Media Marketing Certification"
-    }
+    },
     {
       url:
         "https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/javascript%20assessment.png?raw=true",
       title: "Javascript Assessment"
-    },
+    }
   ]
 };
