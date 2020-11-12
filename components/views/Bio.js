@@ -13,6 +13,7 @@ export default () => `
 
 <h3>My professional coding links</h3></td>
 <ol><h4>
+<li><a href="https://raw.githubusercontent.com/JenniferBagwell/BagwellCapstone/225b0c5d2467a8a41632da4567914c731d1ae320/Documentation/Jennifer%20Bagwell%20Resume%20Savvy%20Coders.pdf"> Dev Resume *Last Updated Nov 2020* </a></li>
 <li><a href="https://www.linkedin.com/in/jenniferbagwell808/"> My LinkedIn </a></li>
 <li><a href="https://www.facebook.com/JennDawB"> Facebook </a></li>
 <li><a href="https://www.supportingstrategies.com/bootcamp-slm19-jennifer-bagwell">Bootcamp Session</li>
