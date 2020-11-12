@@ -67,8 +67,7 @@ form > input[type="submit"] {
 footer {
   border-top: solid 1p white;
   color: white;
-  padding: 0px;
-  margin: 0rem 0rem;
+
   background-image: url("https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/nav%20background.png?raw=true");
 }
 
@@ -196,12 +195,29 @@ bio {
     background-color: grey;
   }
 }
+
+.titlehome {
+  margin-top: 300px;
+color: black;
+  font: helvecia;
+
+}
+
 .myDiv {
   border: 5px outset white;
   background-color: lightgrey;
-  text-align: center;
   max-height:200px;
   max-width: 850px;
-  font-size: 10px;
+  font-size: 18px;
+
   font: helvecia;
+}
+
+.homedes{
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.youtubevid {
+
 }
