@@ -14,8 +14,8 @@ export default {
     }
     {
       url:
-        "https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/certificate-84779373.jpg?raw=true",
-      title: "Agile Cert"
+        "https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/javascript%20assessment.png?raw=true",
+      title: "Javascript Assessment"
     },
   ]
 };
