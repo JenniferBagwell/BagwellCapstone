@@ -26,7 +26,7 @@ const Users = mongoose.model("usercollection", userCollectionSchema);
 app.get("/", (req, res) => res.send(db_status));
 
 app.route("/api/getPosts").get((req, res) => {
-  res.status(200).send("yo");
+  res.status(200).send("This is my blog in progress");
 });
 
 // app.post("/posts", (req, res) => {
