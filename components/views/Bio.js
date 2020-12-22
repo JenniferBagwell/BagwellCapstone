@@ -3,7 +3,7 @@ export default () => `
 <table>
   <tr>
     <td><h2>Jennifer Bagwell</h2></td>
-    <td><h2>Last updated 11/07/2020</h2></td>
+    <td><h2>Last updated 12/07/2020</h2></td>
     <td><img src="https://github.com/JenniferBagwell/BagwellCapstone/blob/master/imgs/bagwell%20pic%20150%20150.png?raw=true"></a>
   </tr>
   <tr>
